@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Votre titre ici</title>
+  <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+  <style>
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px; /* Ajout de padding pour l'espace autour des éléments */
+    }
+
+    .logo img {
+      height: 50px; /* Taille du logo à ajuster selon vos besoins */
+      width: auto;
+    }
+
+    .insta {
+      margin-left: auto; /* Déplace le bouton Instagram à droite */
+      margin-right: 10px; /* Ajout d'une marge à droite pour créer un espace entre les boutons */
+    }
+
+    .insta a {
+      display: inline-block; /* Afficher comme un bloc pour appliquer la largeur et la hauteur */
+      border: none; /* Suppression de la bordure */
+      background: none; /* Suppression de l'arrière-plan */
+      cursor: pointer; /* Définir le curseur comme pointeur au survol */
+    }
+
+    .insta img {
+      height: 30px; /* Taille du logo Instagram à ajuster selon vos besoins */
+      width: auto;
+      opacity:0.5;
+    }
+
+    .leboncoin a {
+      display: inline-block;
+      margin-left: 10px; /* Ajout d'une marge à gauche pour séparer les boutons */
+    }
+
+    .leboncoin img {
+      height: 30px;
+      width: auto;
+    }
+
+    .flecheDroite {
+      position: absolute;
+      top: 50%;
+      right: 3%; /* Ajuster l'espacement de la flèche par rapport à droite */
+      transform: translateY(-50%);
+      background: none; /* Suppression de la couleur de fond */
+      border: none; /* Suppression de la bordure */
+    }
+
+    .flecheDroite img {
+      height: auto; /* Utilisation de la propriété auto pour que la taille s'adapte à la fenêtre */
+      width: 1.5vw; /* Définition de la largeur de la flèche en pourcentage de la largeur de la fenêtre */
+      cursor: pointer; /* Ajout du curseur pointer */
+    }
+
+    .flecheGauche {
+      position: absolute;
+      top: 50%;
+      left: 3%; /* Ajuster l'espacement de la flèche par rapport à droite */
+      transform: translateY(-50%);
+      background: none; /* Suppression de la couleur de fond */
+      border: none; /* Suppression de la bordure */
+    }
+
+    .flecheGauche img {
+      height: auto; /* Utilisation de la propriété auto pour que la taille s'adapte à la fenêtre */
+      width: 1.5vw; /* Définition de la largeur de la flèche en pourcentage de la largeur de la fenêtre */
+      cursor: pointer; /* Ajout du curseur pointer */
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      opacity:0.6;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      margin-top: 1%;
+      min-height: 10vh;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #74A4C0;
+      color: white;
+      font-size: 25px; /* Modification de la taille du bouton */
+      padding: 15px 30px; /* Ajustement du rembourrage du bouton */
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bolder;
+      border-radius: 8px;
+    }
+
+    .btn:hover {
+      background-color: #c7dae6;
+    }
+
+    p {
+      text-align: center;
+      font-size: 20px; /* Nouvelle taille de police */
+      font-family: Rubik, sans-serif; /* Ajout de la police Rubik */
+    }
+
+    .france {
+      display: flex;
+      justify-content: 50%;
+      align-items: center;
+      width: 100%;
+      max-width: 30%;
+      margin-top: 1%;
+      margin-left: 35%;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <href="#"><img src="../Images/logo.png" alt="logo">
+    </div>
+    <div class="insta">
+      <a href="https://www.instagram.com/matronikeffectpedal?igsh=M29vcDUzYWF2bTVy"><img src="../Images/instagram.png" alt="Instagram"></a>
+    </div>
+    <div class="leboncoin">
+      <a href="https://www.leboncoin.fr/profil/e00ed83d-7bfa-41db-a734-8e401064cb06/offres"><img src="../Images/leboncoin.png" alt="LeBonCoin"></a>
+    </div>
+  </div>
+  <div class="container">
+    <img class="logo" src="../Images/image1FondSite.jpg" alt="fond" style="width:100%">
+    <button id="leftArrow" class="flecheGauche">
+      <img src="../Images/flecheGauche.png" alt="Flèche gauche">
+    </button>
+    <button id="rightArrow" class="flecheDroite">
+      <img src="../Images/flecheDroite.png" alt="Flèche droite">
+    </button>
+    <button class="btn">BLOG</button>
+  </div>
+  <div>
+    <p>
+      <br><br>
+      Boutique de pédales d'effets pour guitares électriques.<br>
+      <br>
+      Blog personnel partageant techniques et produits.
+      <br>
+    </p>
+  </div>
+  <div class="france">
+    <img class="france" src="../Images/france.png" alt="france" style="width:100%">
+  </div>
+  <script src="./js.js"></script>
+</body>
+</html>
