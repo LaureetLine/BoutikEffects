@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Votre titre ici</title>
+  <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+  <style>
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px; /* Ajout de padding pour l'espace autour des éléments */
+    }
+
+    .logo img {
+      width: 40%; /* Définissez la largeur du logo en pourcentage de la largeur de son conteneur parent */
+      height: auto;
+    }
+
+    .contact button,
+    .menu button,
+    .insta a,
+    .leboncoin a {
+        margin-right: 20px;
+        background: none;
+        border: none;
+    }
+
+    .contact a {
+      display: inline-block;
+    }
+
+
+    .contact img {
+      height: 30px;
+      width: auto;
+      cursor: pointer; /* Ajout du curseur pointer */
+    }
+
+    .menu a {
+      display: inline-block;
+    }
+
+    .menu button {
+      background: none; /* Suppression de la couleur de fond */
+      border: none; /* Suppression de la bordure */
+    }
+
+    .menu img {
+      height: 25px; /* Utilisation de la propriété auto pour que la taille s'adapte */
+      width: auto; /* Définition de la largeur en pourcentage de la fenêtre */
+      cursor: pointer; /* Ajout du curseur pointer */
+    }
+
+    .insta {
+      margin-left: auto; /* Déplace le bouton Instagram à droite */
+    }
+
+    .insta a {
+      display: inline-block; /* Afficher comme un bloc pour appliquer la largeur et la hauteur */
+      cursor: pointer; /* Définir le curseur comme pointeur au survol */
+    }
+
+    .insta img {
+      height: 30px; /* Taille du logo Instagram à ajuster selon vos besoins */
+      width: auto;
+      opacity:0.5;
+    }
+    
+    .leboncoin a {
+      display: inline-block;
+    }
+
+    .leboncoin img {
+      height: 30px;
+      width: auto;
+    }
+
+    .flecheDroite {
+      position: absolute;
+      top: 50%;
+      right: 3%; /* Ajuster l'espacement de la flèche par rapport à droite */
+      transform: translateY(-50%);
+      background: none; /* Suppression de la couleur de fond */
+      border: none; /* Suppression de la bordure */
+    }
+
+    .flecheDroite img {
+      height: auto; /* Utilisation de la propriété auto pour que la taille s'adapte à la fenêtre */
+      width: 1.5vw; /* Définition de la largeur de la flèche en pourcentage de la largeur de la fenêtre */
+      cursor: pointer; /* Ajout du curseur pointer */
+    }
+
+    .flecheGauche {
+      position: absolute;
+      top: 50%;
+      left: 3%; /* Ajuster l'espacement de la flèche par rapport à droite */
+      transform: translateY(-50%);
+      background: none; /* Suppression de la couleur de fond */
+      border: none; /* Suppression de la bordure */
+    }
+
+    .flecheGauche img {
+      height: auto; /* Utilisation de la propriété auto pour que la taille s'adapte à la fenêtre */
+      width: 1.5vw; /* Définition de la largeur de la flèche en pourcentage de la largeur de la fenêtre */
+      cursor: pointer; /* Ajout du curseur pointer */
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      opacity:0.6;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      margin-top: 1%;
+      min-height: 10vh;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #74A4C0;
+      color: white;
+      font-size: max(1.5vw, 16px); /* Utilisation de vw pour une taille de police relative, avec une taille de police minimale de 16px */
+      padding: 1vw 2.5vw; /* Utilisation de vw pour le rembourrage */
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bolder;
+      border-radius: 8px;
+    }
+
+    .btn:hover {
+      background-color: #c7dae6;
+    }
+
+    p {
+      text-align: center;
+      font-size: max(1.5vw, 16px); /* Utilisation de vw pour une taille de police relative, avec une taille de police minimale de 16px */
+      font-family: Rubik; /* Ajout de la police Rubik */
+    }
+
+    .france {
+      display: flex;
+      justify-content: 50%;
+      align-items: center;
+      width: 100%;
+      max-width: 30%;
+      margin-top: 1%;
+      margin-left: 35%;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + px); /* Placez le menu déroulant juste en dessous du bouton de menu */
+      left: -180px; /* Déplacez le menu légèrement vers la gauche */
+      background-color: #74A4C0;
+      border: 1px solid #74A4C0;
+      z-index: 1000;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      width: 200px;
+      overflow-y: auto;
+      font-family: Rubik;
+      font-size: large;
+    }
+
+.menu {
+  position: relative;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.dropdown-menu li a:hover {
+  background-color: #bddbec;
+}
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <href="#"><img src="../Images/logo.png" alt="logo">
+    </div>
+    <div class="insta">
+      <a href="https://www.instagram.com/matronikeffectpedal?igsh=M29vcDUzYWF2bTVy"><img src="../Images/instagram.png" alt="Instagram"></a>
+    </div>
+    <div class="leboncoin">
+      <a href="https://www.leboncoin.fr/profil/e00ed83d-7bfa-41db-a734-8e401064cb06/offres"><img src="../Images/leboncoin.png" alt="LeBonCoin"></a>
+    </div>
+    <div class="contact">
+      <button>
+        <img src="../Images/contact.png" alt="contact">
+      </button>
+    </div>
+    <div class="menu">
+      <button id="menuBtn">
+        <img src="../Images/menu.png" alt="menu">
+        <ul class="dropdown-menu" id="dropdownMenu">
+          <li><a href="#">Présentation</a></li>
+          <li><a href="#">Les effets</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </button>
+    </div>
+  </div>
+  <script src="./blog.js"></script>
+  <script src="./fondSite.js"></script>
+  <script src="./menu.js"></script>
+</body>
+</html>
