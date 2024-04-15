@@ -2,6 +2,8 @@ var leftArrow = document.querySelector('#leftArrow');
 var rightArrow = document.querySelector('#rightArrow');
 var backgroundImg = document.querySelector('.container img');
 var currentBackground = 0;
+const menuBtn = document.getElementById("menuBtn");
+const dropdownMenu = document.getElementById("dropdownMenu");
 
 leftArrow.onclick = changeBackground;
 rightArrow.onclick = changeBackground;
@@ -21,3 +23,17 @@ function changeBackground() {
     }
     backgroundImg.src = backgrounds[currentBackground].path;
 }
+
+function openBlogPage() {
+    window.location.href = 'blog.html';
+}
+
+// Ajout d'un gestionnaire d'événement au clic sur le bouton de menu
+menuBtn.addEventListener("click", function() {
+    // Si le menu déroulant est caché, le montrer ; sinon, le cacher
+    if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
+      dropdownMenu.style.display = "block";
+    } else {
+      dropdownMenu.style.display = "none";
+    }
+  });
