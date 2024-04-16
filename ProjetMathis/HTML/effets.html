@@ -16,6 +16,7 @@
     .logo img {
       width: 40%; /* Définissez la largeur du logo en pourcentage de la largeur de son conteneur parent */
       height: auto;
+      cursor: pointer;
     }
 
     .contact button,
@@ -78,91 +79,10 @@
       width: auto;
     }
 
-    .flecheDroite {
-      position: absolute;
-      top: 50%;
-      right: 3%; /* Ajuster l'espacement de la flèche par rapport à droite */
-      transform: translateY(-50%);
-      background: none; /* Suppression de la couleur de fond */
-      border: none; /* Suppression de la bordure */
-    }
-
-    .flecheDroite img {
-      height: auto; /* Utilisation de la propriété auto pour que la taille s'adapte à la fenêtre */
-      width: 1.5vw; /* Définition de la largeur de la flèche en pourcentage de la largeur de la fenêtre */
-      cursor: pointer; /* Ajout du curseur pointer */
-    }
-
-    .flecheGauche {
-      position: absolute;
-      top: 50%;
-      left: 3%; /* Ajuster l'espacement de la flèche par rapport à droite */
-      transform: translateY(-50%);
-      background: none; /* Suppression de la couleur de fond */
-      border: none; /* Suppression de la bordure */
-    }
-
-    .flecheGauche img {
-      height: auto; /* Utilisation de la propriété auto pour que la taille s'adapte à la fenêtre */
-      width: 1.5vw; /* Définition de la largeur de la flèche en pourcentage de la largeur de la fenêtre */
-      cursor: pointer; /* Ajout du curseur pointer */
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      
-    }
-
-    .container {
-      position: relative;
-      width: 100%;
-      max-width: 100%;
-      margin-top: 1%;
-      min-height: 10vh;
-      margin-bottom: 20px;
-    }
-
-    .container > * {
-      opacity: 0.6;
-    }
-    .btn {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      background-color: #74A4C0;
-      color: white;
-      font-size: max(1.5vw, 16px); /* Utilisation de vw pour une taille de police relative, avec une taille de police minimale de 16px */
-      padding: 1vw 2.5vw; /* Utilisation de vw pour le rembourrage */
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      text-align: center;
-      font-weight: bolder;
-      border-radius: 8px;
-      opacity: 1; /* Réglage de l'opacité à 1 pour rendre le bouton complètement opaque */
-    }
-
-
-    .btn:hover {
-      background-color: #c7dae6;
-    }
-
     p {
       text-align: center;
-      font-size: max(1.5vw, 16px); /* Utilisation de vw pour une taille de police relative, avec une taille de police minimale de 16px */
+      font-size: max(1.3vw, 16px); /* Utilisation de vw pour une taille de police relative, avec une taille de police minimale de 16px */
       font-family: Rubik; /* Ajout de la police Rubik */
-    }
-
-    .france {
-      display: flex;
-      justify-content: center; /* Centrer horizontalement */
-      align-items: center;
-      width: 100%;
-      max-width: 40%;
-      margin: 1% auto; /* Marge automatique en haut et en bas, et auto à gauche et à droite */
     }
     .dropdown-menu {
       display: none;
@@ -199,12 +119,24 @@
   background-color: #bddbec;
 }
 
+.rond {
+  display: flex;
+  width: 100%;
+  max-width: 10%;
+  margin-left: 20%;
+  margin-top: 3%;
+}
+
+.rond img {
+  max-width: 100%; /* Ajustement de la taille maximale de l'image */
+  height: auto;
+}
   </style>
 </head>
 <body>
   <div class="header">
     <div class="logo">
-      <href="#"><img src="../Images/logo.png" alt="logo">
+      <href="#"><img src="../Images/logo.png" alt="logo" onclick="openAccueilPage()">
     </div>
     <div class="insta">
       <a href="https://www.instagram.com/matronikeffectpedal?igsh=M29vcDUzYWF2bTVy"><img src="../Images/instagram.png" alt="Instagram"></a>
@@ -227,31 +159,15 @@
         </ul>
       </button>
     </div>
-  </div>
-  <div class="container">
-    <img class="logo" src="../Images/image1FondSite.jpg" alt="fond" style="width:100%">
-    <button id="leftArrow" class="flecheGauche">
-      <img src="../Images/flecheGauche.png" alt="Flèche gauche">
-    </button>
-    <button id="rightArrow" class="flecheDroite">
-      <img src="../Images/flecheDroite.png" alt="Flèche droite">
-    </button>
-    <button class="btn" onclick="openBlogPage()">BLOG</button>
-  </div>
+  </div>    
+</div>  
   <div>
+    <p></p>
+  <div class="rond"> 
+    <img src="../Images/rondPresentation.png" alt="rond">
+  </div>    
+
     
-  </div>
-  <div>
-    <p>
-      <br><br>
-      Boutique de pédales d'effets pour guitares électriques.<br>
-      <br>
-      Blog personnel partageant techniques et produits.
-      <br>
-    </p>
-  </div>
-  <div class="france">
-    <img class="france" src="../Images/france.png" alt="france" style="width:100%">
   </div>
   <script src="./blog.js"></script>
   <script src="./fondSite.js"></script>
