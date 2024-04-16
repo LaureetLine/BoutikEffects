@@ -16,6 +16,7 @@
     .logo img {
       width: 40%; /* Définissez la largeur du logo en pourcentage de la largeur de son conteneur parent */
       height: auto;
+      cursor: pointer;
     }
 
     .contact button,
@@ -25,6 +26,7 @@
         margin-right: 20px;
         background: none;
         border: none;
+        opacity:1;
     }
 
     .contact a {
@@ -65,7 +67,7 @@
     .insta img {
       height: 30px; /* Taille du logo Instagram à ajuster selon vos besoins */
       width: auto;
-      opacity:0.5;
+      opacity:0.7;
     }
     
     .leboncoin a {
@@ -77,31 +79,11 @@
       width: auto;
     }
 
-    .presentation img {
-      position: relative;
-      width: 20%;
-      max-width: 100%;
-      margin-top: 20%;
-      min-height: 10vh;
-      margin-bottom: 20px;
-    }
-
-    .presentation {
-      width: 20%;
-      margin-top: 20px; /* Déplace l'image vers le bas */
-    }
-
-    .header {
-      flex-direction: column; /* Change la direction de flexbox en colonne */
-      align-items: center; /* Centre les éléments horizontalement */
-    }
-
     p {
       text-align: center;
-      font-size: max(1.5vw, 16px); /* Utilisation de vw pour une taille de police relative, avec une taille de police minimale de 16px */
+      font-size: max(1.3vw, 16px); /* Utilisation de vw pour une taille de police relative, avec une taille de police minimale de 16px */
       font-family: Rubik; /* Ajout de la police Rubik */
     }
-
     .dropdown-menu {
       display: none;
       position: absolute;
@@ -137,12 +119,25 @@
   background-color: #bddbec;
 }
 
+.rond {
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center;
+  width: 100%;
+  max-width: 15%;
+  margin: 1% auto; /* Marge automatique en haut et en bas, et auto à gauche et à droite */
+}
+
+.rond img {
+  max-width: 100%; /* Ajustement de la taille maximale de l'image */
+  height: auto;
+}
   </style>
 </head>
 <body>
   <div class="header">
     <div class="logo">
-      <href="#"><img src="../Images/logo.png" alt="logo">
+      <href="#"><img src="../Images/logo.png" alt="logo" onclick="openAccueilPage()">
     </div>
     <div class="insta">
       <a href="https://www.instagram.com/matronikeffectpedal?igsh=M29vcDUzYWF2bTVy"><img src="../Images/instagram.png" alt="Instagram"></a>
@@ -159,18 +154,36 @@
       <button id="menuBtn">
         <img src="../Images/menu.png" alt="menu">
         <ul class="dropdown-menu" id="dropdownMenu">
-          <li><a href="#">Présentation</a></li>
+          <li onclick="openPresentationPage()"><a href="#">Présentation</a></li>
           <li><a href="#">Les effets</a></li>
           <li><a href="#">Blog</a></li>
         </ul>
       </button>
     </div>
-    <div class="presentation">
-      <img class="presentation" src="../Images/rondPresentation.png" alt="presentation" style="width:100%"> 
-    </div>
+  </div>    
+  </div>
+  <br><br>
+  <div class="rond"> 
+    <img src="../Images/rondPresentation.png" alt="rond">
+  </div>
+  <div>
+    <p>
+      <br>
+      Bienvenue sur mon site internet !
+      <br><br>
+      Ici, je partage les différents effets de pédales, des tutoriels et des liens utiles !
+      <br><br>
+      Passionné de musique et d'électronique je décide en 2019 de fabriquer des boitiers d'effets pour guitare et basse électriques.
+      <br><br>
+      J'intègre dans ces petits boitiers une carte électronique permettant de modifier le son.
+      <br><br>
+      
+
+    </p>
   </div>
   <script src="./blog.js"></script>
   <script src="./fondSite.js"></script>
   <script src="./menu.js"></script>
+  <script src="./presentation.js"></script>
 </body>
 </html>
