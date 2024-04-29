@@ -6,6 +6,7 @@
   <title>Votre titre ici</title>
   <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
   <style>
+    /* Styles pour l'en-tête */
     .header {
       display: flex;
       justify-content: space-between;
@@ -13,26 +14,26 @@
       padding: 10px 20px; /* Ajout de padding pour l'espace autour des éléments */
     }
 
+    /* Styles pour le logo */
     .logo img {
       width: 40%; /* Définissez la largeur du logo en pourcentage de la largeur de son conteneur parent */
       height: auto;
-      cursor: pointer;
     }
 
+    /* Styles pour les éléments de contact et de menu */
     .contact button,
     .menu button,
     .insta a,
     .leboncoin a {
-        margin-right: 20px;
-        background: none;
-        border: none;
-        opacity:1;
+      margin-right: 20px;
+      background: none;
+      border: none;
+      opacity: 1;
     }
 
     .contact a {
       display: inline-block;
     }
-
 
     .contact img {
       height: 30px;
@@ -67,9 +68,9 @@
     .insta img {
       height: 30px; /* Taille du logo Instagram à ajuster selon vos besoins */
       width: auto;
-      opacity:0.7;
+      opacity: 0.7;
     }
-    
+
     .leboncoin a {
       display: inline-block;
     }
@@ -79,15 +80,49 @@
       width: auto;
     }
 
-    p {
-      text-align: center;
-      font-size: max(1.3vw, 16px); /* Utilisation de vw pour une taille de police relative, avec une taille de police minimale de 16px */
-      font-family: Rubik; /* Ajout de la police Rubik */
+    /* Styles pour les conteneurs */
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      margin-top: 1%;
+      min-height: 10vh;
+      margin-bottom: 20px;
     }
+
+    .container > * {
+      opacity: 0.6;
+    }
+
+    /* Styles pour les boutons */
+    .btn {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #74A4C0;
+      color: white;
+      font-size: max(1.5vw, 16px); /* Utilisation de vw pour une taille de police relative, avec une taille de police minimale de 16px */
+      padding: 1vw 2.5vw; /* Utilisation de vw pour le rembourrage */
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bolder;
+      border-radius: 8px;
+      opacity: 1; /* Réglage de l'opacité à 1 pour rendre le bouton complètement opaque */
+    }
+
+    .btn:hover {
+      background-color: #c7dae6;
+    }
+
+    /* Styles pour les menus déroulants */
     .dropdown-menu {
       display: none;
       position: absolute;
-      top: calc(100% + px); /* Placez le menu déroulant juste en dessous du bouton de menu */
+      top: calc(100% + 10px); /* Placez le menu déroulant juste en dessous du bouton de menu */
       left: -180px; /* Déplacez le menu légèrement vers la gauche */
       background-color: #74A4C0;
       border: 1px solid #74A4C0;
@@ -100,44 +135,71 @@
       font-size: large;
     }
 
-.menu {
-  position: relative;
-}
+    .menu {
+      position: relative;
+    }
 
-.dropdown-menu li {
-  list-style: none;
-}
+    .dropdown-menu li {
+      list-style: none;
+      text-align: center;
+    }
 
-.dropdown-menu li a {
-  display: block;
-  padding: 5px 10px;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
+    .dropdown-menu li a {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
 
-.dropdown-menu li a:hover {
-  background-color: #bddbec;
-}
+    .dropdown-menu li a:hover {
+      background-color: #bddbec;
+    }
 
-.rond {
-  display: flex;
-  width: 100%;
-  max-width: 10%;
-  margin-left: 20%;
-  margin-left: 20%;
-  margin-top: 3%;
-}
+    /* Styles pour les contenus des dropdowns */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: calc(100% + 40px); /* Ajout de 10px de marge entre le bouton et le rectangle */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #a9d1e9;
+      z-index: 1000;
+      padding: 20px;
+      width: 300px;
+      font-family: Rubik;
+      font-size: large;
+      text-align: center;
+      opacity: 1;
+      color: white; /* Couleur du texte à l'intérieur du rectangle bleu */
+    }
 
-.rond img {
-  max-width: 100%; /* Ajustement de la taille maximale de l'image */
-  height: auto;
-}
+    /* Styles pour les images play et sound */
+    .images-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+    }
+
+    .images-wrapper img {
+      max-width: 30px;
+      height: auto;
+      margin: 0 5px;
+    }
+
+    .sound img {
+      max-width: 90px; /* Taille spécifique pour l'image "sound" */
+    }
+
+    .play img{
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <div class="header">
     <div class="logo">
-      <href="#"><img src="../Images/logo.png" alt="logo" onclick="openAccueilPage()">
+      <a href="#" onclick="openAccueilPage()"><img src="../Images/logo.png" alt="logo"></a>
     </div>
     <div class="insta">
       <a href="https://www.instagram.com/matronikeffectpedal?igsh=M29vcDUzYWF2bTVy"><img src="../Images/instagram.png" alt="Instagram"></a>
@@ -153,25 +215,59 @@
     <div class="menu">
       <button id="menuBtn">
         <img src="../Images/menu.png" alt="menu">
-        <ul class="dropdown-menu" id="dropdownMenu">
-          <li onclick="openPresentationPage()"><a href="#">Présentation</a></li>
-          <li onclick="openEffetsPage()"><a href="#">Les effets</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
       </button>
+      <ul class="dropdown-menu dropdown-menu" id="dropdownMenu">
+        <li onclick="openPresentationPage()"><a href="#">Présentation</a></li>
+        <li onclick="openEffetsPage()"><a href="#">Les effets</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
     </div>
-  </div>    
-</div>  
-  <div>
-    <p></p>
-  <div class="rond"> 
-    <img src="../Images/rondPresentation.png" alt="rond">
-  </div> 
-  <div class="enregistrement"> 
-    <img src="../Images/play.png" alt="rond">
-    <img src="../Images/sound.png" alt="rond"> 
-  </div>   
   </div>
+  <br>
+  <div class="container">
+    <button class="btn" onclick="toggleDropdown('dropdown1')">SAD HILL REVERB</button>
+    <div class="dropdown-content dropdown-content1" id="dropdown1">
+      <p>Texte d'explication. Cet effet est vraiment trop cool en fait donc tu as intérêt de l'acheter sinon je te marave.</p>
+      <div class="images-wrapper">
+        <div class="play">
+          <img id="playPauseButton" src="../Images/play.png" onclick="togglePlayPause()" />
+          <audio id="audio1" src="../sounds/sadHillReverb.mp3"></audio>
+        </div>        
+        <div class="sound">
+          <img src="../Images/sound.png" alt="sound">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <button class="btn" onclick="toggleDropdown('dropdown2')">UNI-VIBE</button>
+    <div class="dropdown-content dropdown-content2" id="dropdown2">
+      <p>JE T'AIME KOOOALAAA !</p>
+      <div class="images-wrapper">
+        <div class="play">
+          <img src="../Images/play.png" alt="play">
+        </div>
+        <div class="sound">
+          <img src="../Images/sound.png" alt="sound">
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="container">
+    <button class="btn" onclick="toggleDropdown('dropdown3')">UNI-VIBE</button>
+    <div class="dropdown-content dropdown-content3" id="dropdown3">
+      <p>JE T'AIME KOOOALAAA !</p>
+      <div class="images-wrapper">
+        <div class="play">
+          <a href="https://www.instagram.com/matronikeffectpedal?igsh=M29vcDUzYWF2bTVy"><img src="../Images/play.png" alt="play"></a>
+        </div>
+        <div class="sound">
+          <img src="../Images/sound.png" alt="sound">
+        </div>
+      </div>
+    </div>
+  </div> 
+  <script src="OpenEffets.js"></script>
   <script src="./blog.js"></script>
   <script src="./fondSite.js"></script>
   <script src="./menu.js"></script>
