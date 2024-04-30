@@ -7,3 +7,6 @@ function openAccueilPage() {
 function openEffetsPage() {
     window.location.href = 'effets.html';
 }
+function openContactPage() {
+    window.location.href = 'contact.html';
+}

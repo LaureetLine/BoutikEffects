@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Votre titre ici</title>
+  <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+  <style>
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px; /* Ajout de padding pour l'espace autour des éléments */
+    }
+
+    .logo img {
+      width: 40%; /* Définissez la largeur du logo en pourcentage de la largeur de son conteneur parent */
+      height: auto;
+      cursor: pointer;
+    }
+
+    .contact button,
+    .menu button,
+    .insta a,
+    .leboncoin a {
+        margin-right: 20px;
+        background: none;
+        border: none;
+        opacity:1;
+    }
+
+    .contact a {
+      display: inline-block;
+    }
+
+
+    .contact img {
+      height: 30px;
+      width: auto;
+      cursor: pointer; /* Ajout du curseur pointer */
+    }
+
+    .menu a {
+      display: inline-block;
+    }
+
+    .menu button {
+      background: none; /* Suppression de la couleur de fond */
+      border: none; /* Suppression de la bordure */
+    }
+
+    .menu img {
+      height: 25px; /* Utilisation de la propriété auto pour que la taille s'adapte */
+      width: auto; /* Définition de la largeur en pourcentage de la fenêtre */
+      cursor: pointer; /* Ajout du curseur pointer */
+    }
+
+    .insta {
+      margin-left: auto; /* Déplace le bouton Instagram à droite */
+    }
+
+    .insta a {
+      display: inline-block; /* Afficher comme un bloc pour appliquer la largeur et la hauteur */
+      cursor: pointer; /* Définir le curseur comme pointeur au survol */
+    }
+
+    .insta img {
+      height: 30px; /* Taille du logo Instagram à ajuster selon vos besoins */
+      width: auto;
+      opacity:0.7;
+    }
+    
+    .leboncoin a {
+      display: inline-block;
+    }
+
+    .leboncoin img {
+      height: 30px;
+      width: auto;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + px); /* Placez le menu déroulant juste en dessous du bouton de menu */
+      left: -180px; /* Déplacez le menu légèrement vers la gauche */
+      background-color: #567ed4;
+      border-radius: 5px;
+      z-index: 1000;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      width: 200px;
+      overflow-y: auto;
+      font-family: Rubik;
+      font-size: large;
+    }
+
+    .menu {
+      position: relative;
+    }
+
+    .dropdown-menu li {
+      list-style: none;
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: #ccd7ec;
+      border-radius: 5px;
+    }
+
+    body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  color: #000000;
+  font-family: Rubik;
+  font-size: 16px;
+}
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+input, textarea {
+  background-color: #567ed4;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  border-color: white;
+  min-width: 300px;
+}
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+
+.inline{
+  display: inline; 
+}
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <href="#"><img src="../Images/logo.png" alt="logo" onclick="openAccueilPage()">
+    </div>
+    <div class="insta">
+      <a href="https://www.instagram.com/matronikeffectpedal?igsh=M29vcDUzYWF2bTVy"><img src="../Images/instagram.png" alt="Instagram"></a>
+    </div>
+    <div class="leboncoin">
+      <a href="https://www.leboncoin.fr/profil/e00ed83d-7bfa-41db-a734-8e401064cb06/offres"><img src="../Images/leboncoin.png" alt="LeBonCoin"></a>
+    </div>
+    <div class="contact">
+      <button>
+        <img src="../Images/contact.png" alt="contact" onclick="openContactPage()">
+      </button>
+    </div>
+    <div class="menu">
+      <button id="menuBtn">
+        <img src="../Images/menu.png" alt="menu">
+        <ul class="dropdown-menu" id="dropdownMenu">
+          <li onclick="openPresentationPage()"><a href="#">PRESENTATION</a></li>
+          <li onclick="openEffetsPage()"><a href="#">LES EFFETS</a></li>
+          <li><a href="#">BLOG</a></li>
+        </ul>
+      </button>
+    </div>
+  </div>
+  <h1>FORMULAIRE D'INSCRIPTION</h1>
+    <form method="post" action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label for="first-name">Entrez votre prénom : <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Entrez votre nom de famille : <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Entrez votre Email : <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Creez votre mot de passe : <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Account type (required)</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Business</label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">Input your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <label for="referrer">How did you hear about us?
+          <select id="referrer" name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label for="bio">Provide a bio:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+        </label>
+      </fieldset>
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+      </label>
+      <input type="submit" value="Submit" />
+    </form> 
+  </div>
+  
+  <script src="./menu.js"></script>
+  <script src="./blog.js"></script>
+  <script src="./fondSite.js"></script>
+  <script src="./presentation.js"></script>
+</body>
+</html>
