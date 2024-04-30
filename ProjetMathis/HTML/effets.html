@@ -14,7 +14,6 @@
       padding: 10px 20px; /* Ajout de padding pour l'espace autour des éléments */
     }
 
-    /* Styles pour le logo */
     .logo img {
       width: 40%; /* Définissez la largeur du logo en pourcentage de la largeur de son conteneur parent */
       height: auto;
@@ -93,8 +92,57 @@
     .container > * {
       opacity: 0.6;
     }
-    
 
+    body {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      color: #000000;
+      font-family: Rubik;
+      font-size: 16px;
+      }
+
+        h1, p {
+          margin: 1em auto;
+          text-align: center;
+        }
+
+    .pedale img {
+      width: 50px; /* Réduire la largeur de l'image */
+      height: auto; /* Laisser la hauteur ajustée automatiquement */
+      margin-bottom: 5px;
+    }
+
+    /* Styles pour la position de l'image */
+    .pedale {
+      text-align: center; /* Aligner l'image au centre */
+      margin-top: 20px; /* Ajouter un espace entre le titre et l'image */
+      opacity: 80%;
+    }
+
+    .flecheBas img {
+      width: 50px; /* Réduire la largeur de l'image */
+      height: auto; /* Laisser la hauteur ajustée automatiquement */
+      opacity: 40%;
+    }
+
+    /* Styles pour la position de l'image */
+    .flecheBas {
+      text-align: center; /* Aligner l'image au centre */
+      margin-top: 40px; /* Ajouter un espace entre le titre et l'image */
+    }
+
+    /* Styles pour le fond bleu */
+    .background {
+    position: fixed;
+    top: 0;
+    left: 50%; /* Modification de la position de départ */
+    transform: translateX(-50%); /* Centrage horizontal */
+    width: 100%;
+    height: 100%;
+    background-color: #9facf82d;
+    z-index: -1;
+  }
     /* Styles pour les boutons */
     .btn {
       position: absolute;
@@ -197,6 +245,7 @@
     .play img{
       cursor: pointer;
     }
+
   </style>
 </head>
 <body>
@@ -227,6 +276,14 @@
     </div>
   </div>
   <br>
+  <h1>LES EFFETS</h1>
+  <div class="pedale">
+    <img src="../Images/pedaleLogo.png" alt="pedale">
+  </div>
+  <div class="background"></div>
+  <div class="flecheBas">
+    <img src="../Images/flecheBas.png" alt="flecheBas">
+  </div>
   <div class="container">
     <button class="btn" onclick="toggleDropdown('dropdown1')">SAD HILL REVERB</button>
     <div class="dropdown-content dropdown-content1" id="dropdown1">
