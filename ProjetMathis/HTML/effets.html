@@ -93,6 +93,7 @@
     .container > * {
       opacity: 0.6;
     }
+    
 
     /* Styles pour les boutons */
     .btn {
@@ -101,7 +102,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
-      background-color: #74A4C0;
+      background-color: #567ed4;
       color: white;
       font-size: max(1.5vw, 16px); /* Utilisation de vw pour une taille de police relative, avec une taille de police minimale de 16px */
       padding: 1vw 2.5vw; /* Utilisation de vw pour le rembourrage */
@@ -109,13 +110,13 @@
       cursor: pointer;
       border-radius: 5px;
       text-align: center;
-      font-weight: bolder;
-      border-radius: 8px;
+      font-weight: lighter;
+      border-radius: 5px;
       opacity: 1; /* Réglage de l'opacité à 1 pour rendre le bouton complètement opaque */
     }
 
     .btn:hover {
-      background-color: #c7dae6;
+      background-color: #ccd7ec;
     }
 
     /* Styles pour les menus déroulants */
@@ -124,11 +125,10 @@
       position: absolute;
       top: calc(100% + 10px); /* Placez le menu déroulant juste en dessous du bouton de menu */
       left: -180px; /* Déplacez le menu légèrement vers la gauche */
-      background-color: #74A4C0;
-      border: 1px solid #74A4C0;
+      background-color: #567ed4;
+      border-radius: 5px;
       z-index: 1000;
       padding: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       width: 200px;
       overflow-y: auto;
       font-family: Rubik;
@@ -149,10 +149,12 @@
       padding: 5px 10px;
       text-decoration: none;
       color: rgb(255, 255, 255);
+      font-size: 16px;
     }
 
     .dropdown-menu li a:hover {
-      background-color: #bddbec;
+      background-color: #ccd7ec;
+      border-radius: 5px;
     }
 
     /* Styles pour les contenus des dropdowns */
@@ -162,15 +164,16 @@
       top: calc(100% + 40px); /* Ajout de 10px de marge entre le bouton et le rectangle */
       left: 50%;
       transform: translateX(-50%);
-      background-color: #a9d1e9;
+      background-color: #ccd7ec;
       z-index: 1000;
-      padding: 20px;
-      width: 300px;
+      padding: 30px;
+      width: 500px;
       font-family: Rubik;
       font-size: large;
       text-align: center;
       opacity: 1;
-      color: white; /* Couleur du texte à l'intérieur du rectangle bleu */
+      color: rgb(0, 0, 0); /* Couleur du texte à l'intérieur du rectangle bleu */
+      border-radius: 5px;
     }
 
     /* Styles pour les images play et sound */
@@ -217,9 +220,9 @@
         <img src="../Images/menu.png" alt="menu">
       </button>
       <ul class="dropdown-menu dropdown-menu" id="dropdownMenu">
-        <li onclick="openPresentationPage()"><a href="#">Présentation</a></li>
-        <li onclick="openEffetsPage()"><a href="#">Les effets</a></li>
-        <li><a href="#">Blog</a></li>
+        <li onclick="openPresentationPage()"><a href="#">PRESENTATION</a></li>
+        <li onclick="openEffetsPage()"><a href="#">LES EFFETS</a></li>
+        <li><a href="#">BLOG</a></li>
       </ul>
     </div>
   </div>
@@ -230,7 +233,7 @@
       <p>Texte d'explication. Cet effet est vraiment trop cool en fait donc tu as intérêt de l'acheter sinon je te marave.</p>
       <div class="images-wrapper">
         <div class="play">
-          <img id="playPauseButton" src="../Images/play.png" onclick="togglePlayPause()" />
+          <img id="playPauseButton1" src="../Images/play.png" onclick="togglePlayPause('audio1', 'playPauseButton1')" />
           <audio id="audio1" src="../sounds/sadHillReverb.mp3"></audio>
         </div>        
         <div class="sound">
@@ -242,10 +245,25 @@
   <div class="container">
     <button class="btn" onclick="toggleDropdown('dropdown2')">UNI-VIBE</button>
     <div class="dropdown-content dropdown-content2" id="dropdown2">
+      <p>Texte d'explication. Cet effet est vraiment trop cool en fait donc tu as intérêt de l'acheter sinon je te marave.</p>
+      <div class="images-wrapper">
+        <div class="play">
+          <img id="playPauseButton2" src="../Images/play.png" onclick="togglePlayPause('audio2', 'playPauseButton2')" />
+          <audio id="audio2" src="../sounds/sadHillReverb.mp3"></audio>
+        </div>        
+        <div class="sound">
+          <img src="../Images/sound.png" alt="sound">
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="container">
+    <button class="btn" onclick="toggleDropdown('dropdown3')">PEDAL WAH WAH</button>
+    <div class="dropdown-content dropdown-content3" id="dropdown3">
       <p>JE T'AIME KOOOALAAA !</p>
       <div class="images-wrapper">
         <div class="play">
-          <img src="../Images/play.png" alt="play">
+          <a href="https://www.instagram.com/matronikeffectpedal?igsh=M29vcDUzYWF2bTVy"><img src="../Images/play.png" alt="play"></a>
         </div>
         <div class="sound">
           <img src="../Images/sound.png" alt="sound">
@@ -254,8 +272,36 @@
     </div>
   </div> 
   <div class="container">
-    <button class="btn" onclick="toggleDropdown('dropdown3')">UNI-VIBE</button>
-    <div class="dropdown-content dropdown-content3" id="dropdown3">
+    <button class="btn" onclick="toggleDropdown('dropdown4')">ECHO-SONIC</button>
+    <div class="dropdown-content dropdown-content4" id="dropdown4">
+      <p>JE T'AIME KOOOALAAA !</p>
+      <div class="images-wrapper">
+        <div class="play">
+          <a href="https://www.instagram.com/matronikeffectpedal?igsh=M29vcDUzYWF2bTVy"><img src="../Images/play.png" alt="play"></a>
+        </div>
+        <div class="sound">
+          <img src="../Images/sound.png" alt="sound">
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="container">
+    <button class="btn" onclick="toggleDropdown('dropdown5')">PHASE-PULSE</button>
+    <div class="dropdown-content dropdown-content5" id="dropdown5">
+      <p>JE T'AIME KOOOALAAA !</p>
+      <div class="images-wrapper">
+        <div class="play">
+          <a href="https://www.instagram.com/matronikeffectpedal?igsh=M29vcDUzYWF2bTVy"><img src="../Images/play.png" alt="play"></a>
+        </div>
+        <div class="sound">
+          <img src="../Images/sound.png" alt="sound">
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="container">
+    <button class="btn" onclick="toggleDropdown('dropdown6')">SHIMMER-VERB</button>
+    <div class="dropdown-content dropdown-content6" id="dropdown6">
       <p>JE T'AIME KOOOALAAA !</p>
       <div class="images-wrapper">
         <div class="play">

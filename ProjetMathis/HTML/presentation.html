@@ -89,8 +89,8 @@
       position: absolute;
       top: calc(100% + px); /* Placez le menu déroulant juste en dessous du bouton de menu */
       left: -180px; /* Déplacez le menu légèrement vers la gauche */
-      background-color: #74A4C0;
-      border: 1px solid #74A4C0;
+      background-color: #567ed4;
+      border-radius: 5px;
       z-index: 1000;
       padding: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -113,10 +113,13 @@
   padding: 5px 10px;
   text-decoration: none;
   color: rgb(255, 255, 255);
+  font-size: 16px;
+  
 }
 
 .dropdown-menu li a:hover {
   background-color: #bddbec;
+  border-radius: 5px;
 }
 
 .rond {
@@ -154,9 +157,9 @@
       <button id="menuBtn">
         <img src="../Images/menu.png" alt="menu">
         <ul class="dropdown-menu" id="dropdownMenu">
-          <li onclick="openPresentationPage()"><a href="#">Présentation</a></li>
-          <li onclick="openEffetsPage()"><a href="#">Les effets</a></li>
-          <li><a href="#">Blog</a></li>
+          <li onclick="openPresentationPage()"><a href="#">PRESENTATION</a></li>
+          <li onclick="openEffetsPage()"><a href="#">LES EFFETS</a></li>
+          <li><a href="#">BLOG</a></li>
         </ul>
       </button>
     </div>
